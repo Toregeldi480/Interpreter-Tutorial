@@ -1,0 +1,11 @@
+fun main() {
+  var anything = 123;
+  if (123 == 123) {
+    anything = anything + 123;
+    if (anything >= 123 or (anything > 123 and anything == 123)) {
+      anything = 0;
+    }
+
+    return anything;
+  }
+}

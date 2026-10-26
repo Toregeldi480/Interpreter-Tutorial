@@ -1,0 +1,11 @@
+#!/bin/sh
+(
+  set -e
+  OUT=run
+  rm -rf "$OUT"
+  mkdir "$OUT"
+  find src/main/java -name "*.java" > "$OUT/sources.txt"
+  javac -d "$OUT" "@$OUT/sources.txt"
+  java -cp "$OUT" Main "$@"
+)
+
